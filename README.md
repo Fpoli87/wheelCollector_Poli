@@ -1,3 +1,22 @@
+
+Bienvenidos al Repositorio
+
+Este repositorio fue creado para subir el proyecto entregable del curso REACT de coderhouse!
+
+A continuacion se listan los detalles de cada commit agregado
+
+Creacion REACT app
+
+
+---. Version 0.1 .---
+
+- Se agrega navbar de bootstrap 
+- Se hacen pequeños cambios de estilos
+
+Espero que sea de su agrado! 
+
+Gracias! .-
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
