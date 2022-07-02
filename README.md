@@ -15,6 +15,15 @@ Creacion REACT app
 
 Espero que sea de su agrado! 
 
+---. Version 0.2 .---
+
+- Se agrega componente CartWidget.js para carrito de compras
+- Se agrega un svg como imagen del carrito
+- Se agrega componente ItemListContainer.js
+- Se agrega ItemListContainer al APP.JS
+- Se realiza cambios de estilo en propiedad "greeting"
+
+
 Gracias! .-
 
 # Getting Started with Create React App

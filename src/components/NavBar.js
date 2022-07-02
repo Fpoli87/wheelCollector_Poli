@@ -1,4 +1,5 @@
 import React from "react";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return (
@@ -6,13 +7,13 @@ const NavBar = () => {
             <nav className="navbar w-100 navbar-dark bg-primary navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand">Wheel Collector!</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button" dataBsToggle="collapse" dataBsTarget="#navbarNav" ariaControls="navbarNav" ariaExpanded="false" ariaLabel="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                            <a className="nav-link active" aria-current="page">Inicio</a>
+                            <a className="nav-link active" ariaCurrent="page">Inicio</a>
                             </li>
                             <li className="nav-item">
                             <a className="nav-link">Produtos</a>
@@ -21,6 +22,7 @@ const NavBar = () => {
                             <a className="nav-link">Sobre Nosotros</a>
                             </li>
                         </ul>
+                        <CartWidget/>
                     </div>
                 </div>
             </nav>
