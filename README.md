@@ -23,6 +23,11 @@ Espero que sea de su agrado!
 - Se agrega ItemListContainer al APP.JS
 - Se realiza cambios de estilo en propiedad "greeting"
 
+---. Version 0.3 .---
+
+- Se agrega componente ItemCount.js
+- Se agregan estilos al componente
+
 
 Gracias! .-
 
