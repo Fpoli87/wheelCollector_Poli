@@ -1,30 +1,64 @@
-import React, {useState , useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import products from '../products.json';
 
+const getData = new Promise((resolve, reject) => {
+    let promiseAcept = true;
+    setTimeout(() => {
+      if (promiseAcept) {
+        resolve(products);
+      } else {
+        reject("Lo siento, no podemos acceder a los datos!");
+      }
+    }, 2000);
+  });
+  
 const ItemListContainer = ({ greeting }) => {
-    
-    const [list, setList] = useState(true);
 
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    console.log("products: ", products);
+    
     useEffect(() => {
-        setTimeout(() => {
-          setList(false);
-        }, 2000);
-        console.log('useEffect');
+
+        
+        getData
+          .then((data) => {
+            setProducts(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }, []);
+
+      const getProducts = async () => {
+        try {
+          const response = await getData;
+          setProducts(response);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          setLoading(false);
+        }
+      };
+    
+      useEffect(() => {
+        getProducts();
       }, []);
 
     return (
     <div className='fs-1 mt-3 fst-italic'>
         {greeting}
-        {list ? (
-            <h3>Actualizando lista...</h3>
-            ) : (
-                <><ItemCount
-                        stock={5}
-                        initial={1}
-                        onAdd={(n) => alert(`Agregados ${n} productos!`)} /><ItemList items={products} /></>
-                )}
+        <ItemCount 
+            stock={5} 
+            initial={1} 
+            onAdd={(n) => alert(`Agregados ${n} productos!`)} 
+        />
+        {loading ? <span>Cargando los productos...</span> : <ItemList items={products} />}
     </div>
   )
 }
