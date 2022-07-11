@@ -28,6 +28,13 @@ Espero que sea de su agrado!
 - Se agrega componente ItemCount.js
 - Se agregan estilos al componente
 
+---. Version 0.3 .---
+
+- Se agrega componente Item.js e ItemList.js
+- Se agrega products.json
+- Se resuelve promise para delay de 2 segundos al momento de visualizar la lista de productos disponibles
+- Se agregan estilos para la visualizacion de las tarjetas de productos
+
 
 Gracias! .-
 
