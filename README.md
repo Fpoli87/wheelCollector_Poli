@@ -35,8 +35,18 @@ Espero que sea de su agrado!
 - Se resuelve promise para delay de 2 segundos al momento de visualizar la lista de productos disponibles
 - Se agregan estilos para la visualizacion de las tarjetas de productos
 
+---. Version 0.4 .---
+
+- Se agrega componente ItemDetail.js, ItemDetailList.js e ItemDetailContainer.js
+- Se agrega product.json
+- Se resuelve promise para agregar el delay solicitado en la consigna
+- Se hace cambios de estilos propios a un detalle de producto
+
 
 Gracias! .-
+
+
+
 
 # Getting Started with Create React App
 

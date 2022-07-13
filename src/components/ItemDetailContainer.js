@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetailContainer from './ItemDetailContainer';
-import ItemList from './ItemList';
-import products from '../products.json';
+import product from '../product.json';
+import ItemDetailList from './ItemDetailList';
 
 const getData = new Promise((resolve, reject) => {
     let promiseAcept = true;
     setTimeout(() => {
       if (promiseAcept) {
-        resolve(products);
+        resolve(product);
       } else {
         reject("Lo siento, no podemos acceder a los datos!");
       }
     }, 2000);
   });
   
-const ItemListContainer = ({ greeting }) => {
+const ItemDetailContainer = ({ greeting }) => {
 
-    const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
-    console.log("products: ", products);
+    console.log("product: ", product);
     
     useEffect(() => {
 
         
         getData
           .then((data) => {
-            setProducts(data);
+            setProduct(data);
           })
           .catch((err) => {
             console.log(err);
@@ -35,10 +34,10 @@ const ItemListContainer = ({ greeting }) => {
           });
       }, []);
 
-      const getProducts = async () => {
+      const getProduct = async () => {
         try {
           const response = await getData;
-          setProducts(response);
+          setProduct(response);
         } catch (error) {
           console.log(error);
         } finally {
@@ -47,17 +46,15 @@ const ItemListContainer = ({ greeting }) => {
       };
     
       useEffect(() => {
-        getProducts();
+        getProduct();
       }, []);
 
     return (
     <div className='fs-1 mt-3 fst-italic'>
-        {greeting}
-        <ItemDetailContainer />
+        {loading ? <span>Cargando el detalle del producto...</span> : <ItemDetailList items2={product} />}
         
-        {loading ? <span>Cargando los productos...</span> : <ItemList items={products} />}
     </div>
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
