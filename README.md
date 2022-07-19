@@ -42,6 +42,10 @@ Espero que sea de su agrado!
 - Se resuelve promise para agregar el delay solicitado en la consigna
 - Se hace cambios de estilos propios a un detalle de producto
 
+---. Version 0.5 .---
+
+- Se agregan rutas
+
 
 Gracias! .-
 

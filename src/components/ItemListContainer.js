@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetailContainer from './ItemDetailContainer';
+import {Outlet} from 'react-router-dom';
 import ItemList from './ItemList';
 import products from '../products.json';
 
@@ -14,7 +14,7 @@ const getData = new Promise((resolve, reject) => {
     }, 2000);
   });
   
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -35,25 +35,12 @@ const ItemListContainer = ({ greeting }) => {
           });
       }, []);
 
-      const getProducts = async () => {
-        try {
-          const response = await getData;
-          setProducts(response);
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setLoading(false);
-        }
-      };
-    
-      useEffect(() => {
-        getProducts();
-      }, []);
+      
 
     return (
     <div className='fs-1 mt-3 fst-italic'>
-        {greeting}
-        <ItemDetailContainer />
+        
+        <Outlet />
         
         {loading ? <span>Cargando los productos...</span> : <ItemList items={products} />}
     </div>

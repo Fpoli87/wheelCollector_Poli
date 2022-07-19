@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
 import ItemCount from './ItemCount';
+import products from '../products.json'
 
-
+const getData = new Promise((resolve, reject) => {
+  let promiseAcept = true;
+  setTimeout(() => {
+    if (promiseAcept) {
+      resolve(products);
+    } else {
+      reject("Lo siento, no podemos acceder a los datos!");
+    }
+  }, 2000);
+});
 
 const ItemDetail = ({id, title, description, price, stock, pictureUrl}) => {
+  let params = useParams();
+  console.log(params)
+
+  
+
+  const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    console.log("products: ", products);
+    
+    useEffect(() => {
+
+        
+        getData
+          .then((data) => {
+            setProducts(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }, []);
+
   return (
     
     <div className=' m-3 '>

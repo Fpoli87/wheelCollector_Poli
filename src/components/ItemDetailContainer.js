@@ -34,20 +34,7 @@ const ItemDetailContainer = ({ greeting }) => {
           });
       }, []);
 
-      const getProduct = async () => {
-        try {
-          const response = await getData;
-          setProduct(response);
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setLoading(false);
-        }
-      };
-    
-      useEffect(() => {
-        getProduct();
-      }, []);
+      
 
     return (
     <div className='fs-1 mt-3 fst-italic'>
