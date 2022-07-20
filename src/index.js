@@ -4,23 +4,36 @@ import './index.css';
 import App from './App';
 import Productos from './pages/product';
 import Nosotros from './pages/nosotros';
+import Home from './pages/home';
+import Categorias from './pages/categorias';
+import Hombres from './pages/hombres';
+import Mujer from './pages/mujer';
+import Electro from './pages/electro';
+import Joyas from './pages/joyas';
 import { 
   BrowserRouter, 
   Route,
-  Switch,
   Routes, 
 } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
-import ItemDetail from './components/ItemDetail';
+import Prodetail from './pages/prodetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
         <Route path="/" element={<App />} >
-          <Route path="productos" element={<Productos />} />
-          <Route path="productos/:id" element={<ItemDetail />} />
+          <Route path="categorias" element={<Categorias />}>
+            <Route path='hombres' element={<Hombres />}/>
+            <Route path='mujer' element={<Mujer />}/>
+            <Route path='electro' element={<Electro />}/>
+            <Route path='joyas' element={<Joyas />}/>
+          </Route> 
+          <Route path='productos' element={<Productos />}/>
+          <Route path="productos/:id" element={<Prodetail />} />
           <Route path="nosotros" element={<Nosotros />}/>
+          <Route path='*' element={<Home />}/>
+          <Route index element={<Home />}/>
         </Route>
     </Routes>
   </BrowserRouter>

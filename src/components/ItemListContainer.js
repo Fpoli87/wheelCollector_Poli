@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Outlet} from 'react-router-dom';
 import ItemList from './ItemList';
-import products from '../products.json';
+import products from '../products';
 
 const getData = new Promise((resolve, reject) => {
     let promiseAcept = true;

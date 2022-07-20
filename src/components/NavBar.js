@@ -7,7 +7,7 @@ const NavBar = () => {
         <div className="nav">
             <nav className="navbar w-100 navbar-dark bg-primary navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand">Wheel Collector!</a>
+                    <Link to="/" className="navbar-brand">Wheel Collector!</Link>
                     <button className="navbar-toggler" type="button" databstoggle="collapse" databstarget="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
@@ -17,7 +17,7 @@ const NavBar = () => {
                             <Link to="/" className="nav-link" aria-current="page">Inicio</Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/productos" className="nav-link">Produtos</Link>
+                            <Link to="/categorias" className="nav-link">Categorias</Link>
                             </li>
                             <li className="nav-item">
                             <Link to="/nosotros" className="nav-link">Sobre Nosotros</Link>

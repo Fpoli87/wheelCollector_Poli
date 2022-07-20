@@ -1,9 +1,9 @@
 import React from 'react';
-import ItemCount from './ItemCount';
+import ItemCount from '../ItemCount';
 
 
 
-const ItemDetail = ({item}) => {
+const Hombredetalle = ({item}) => {
   const {id, title, price, stock, description, pictureUrl, category} = item
 
   
@@ -36,5 +36,5 @@ const ItemDetail = ({item}) => {
   
   );
 }
-export default ItemDetail
+export default Hombredetalle
  

@@ -46,6 +46,13 @@ Espero que sea de su agrado!
 
 - Se agregan rutas
 
+---. Version 0.5.1 .---
+
+- Nuevos componentes
+-Se obtienen detalle por cada producto
+-Se agrega nuevas paginas .js
+-Se agregan los siguientes componentes - Categorias.js , HomeImg.js - 
+-Correccion de rutas
 
 Gracias! .-
 
