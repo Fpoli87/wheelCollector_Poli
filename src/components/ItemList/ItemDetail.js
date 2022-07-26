@@ -1,10 +1,17 @@
 import React from 'react';
 import ItemCount from './ItemCount';
-
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { cartContext } from '../../Context/CartContext';
+import { useContext } from 'react';
 
 
 const ItemDetail = ({item}) => {
+
   const {id, title, price, stock, description, pictureUrl, category} = item
+  
+  const navigate = useNavigate();
+  const {addProd} = useContext(cartContext)
 
   
   return (
@@ -29,8 +36,14 @@ const ItemDetail = ({item}) => {
         <ItemCount 
             stock={stock} 
             initial={1} 
-            onAdd={(n) => alert(`Agregados ${n} productos!`)} 
+            onClick={(n) => alert(`Agregados ${n} productos!`)}
+            onAdd={addProd} 
         />
+
+        <Link to={'/categorias'} onClick={() => navigate(-1)}>
+          <button type="button" className="btn btn-primary m-1">Volver atras</button>
+        </Link>
+
         <br />
     </div>
   

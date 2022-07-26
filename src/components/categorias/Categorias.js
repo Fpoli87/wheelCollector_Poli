@@ -36,7 +36,8 @@ const Categorias = () => {
     <div className='fs-1 mt-3 fst-italic'>
         
         <Outlet />
-        HOLA
+        
+        <h2>Productos Disponibles en Seccion {category}</h2>
 
         {item.map(items =>
           <CategoriaDetalle items={ items } />

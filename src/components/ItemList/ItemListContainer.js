@@ -42,6 +42,8 @@ const ItemListContainer = () => {
     <div className='fs-1 mt-3 fst-italic'>
       
         <Outlet />
+        <br />
+        <h2> Lista de Productos</h2>
         
         {loading ? <span>Cargando los productos...</span> : <ItemList items={products} />}
     </div>

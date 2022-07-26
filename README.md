@@ -61,6 +61,11 @@ Espero que sea de su agrado!
 - Se obtiene filtro por categoria
 - Se agrega context
 
+---. Version 0.6.1 .---
+
+- Correccion de render
+- Cambios en estilos de componentes
+
 Gracias! .-
 
 

@@ -1,15 +1,17 @@
 import React from 'react';
 import ItemDetailContainer from '../components/ItemList/ItemDetailContainer';
 
-const prodetail = () => {
+
+
+const ProDetail = () => {
+
   return (
     <div>
 
         <ItemDetailContainer />
 
-        <button>Volver atras</button>
     </div>
   )
 }
 
-export default prodetail
+export default ProDetail

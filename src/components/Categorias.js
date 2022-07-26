@@ -4,7 +4,9 @@ import { Link, Outlet } from 'react-router-dom'
 const categorias = () => {
   return (
     <div className='d-inline'>
+        <br />
         CATEGORIAS
+        <br />
         <br />
                 <Link to="/categorias/Hombres" className="nav-link d-inline m-3" aria-current="page">Ropa de Hombre</Link>
                 {" | "}
