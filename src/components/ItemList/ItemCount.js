@@ -15,8 +15,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <br />
         <h3 className="fst-italic">{count}</h3>
         <button type="button" className="btn btn-primary m-1" onClick={decrementar}>-</button>
-        <button type="button" className="btn btn-primary m-1" onClick={incrementar}>+</button>
-        <button type="button" className="btn btn-primary m-1" onClick={() => {
+        <button type="button" className="btn btn-primary m-1" disabled={count >= stock} onClick={incrementar}>+</button>
+        <button type="button" className="btn btn-primary m-1" disabled={stock < 1} onClick={() => {
             if (count <= stock) {
                 onAdd(count);
             } else {

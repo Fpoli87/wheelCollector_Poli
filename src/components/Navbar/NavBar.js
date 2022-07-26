@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
@@ -7,23 +7,23 @@ const NavBar = () => {
         <div className="nav">
             <nav className="navbar w-100 navbar-dark bg-primary navbar-expand-lg">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand">Wheel Collector!</Link>
+                    <NavLink to="/" className="navbar-brand">Wheel Collector!</NavLink>
                     <button className="navbar-toggler" type="button" databstoggle="collapse" databstarget="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                            <Link to="/" className="nav-link" aria-current="page">Inicio</Link>
+                            <NavLink to="/" className="nav-link" aria-current="page">Inicio</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link to="/categorias" className="nav-link">Categorias</Link>
+                            <NavLink to="/categorias" className="nav-link">Categorias</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link to="/nosotros" className="nav-link">Sobre Nosotros</Link>
+                            <NavLink to="/nosotros" className="nav-link">Sobre Nosotros</NavLink>
                             </li>
                         </ul>
-                        <CartWidget/>
+                        <NavLink to="/carrito" className="nav-link" ><CartWidget/></NavLink>
                     </div>
                 </div>
             </nav>

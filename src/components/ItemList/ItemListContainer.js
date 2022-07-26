@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {Outlet} from 'react-router-dom';
 import ItemList from './ItemList';
-import products from '../products';
+import Categorias from '../Categorias'
+import products from '../../products';
 
 const getData = new Promise((resolve, reject) => {
     let promiseAcept = true;
@@ -39,7 +40,7 @@ const ItemListContainer = () => {
 
     return (
     <div className='fs-1 mt-3 fst-italic'>
-        
+      
         <Outlet />
         
         {loading ? <span>Cargando los productos...</span> : <ItemList items={products} />}

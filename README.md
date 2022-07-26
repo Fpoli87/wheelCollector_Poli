@@ -54,6 +54,13 @@ Espero que sea de su agrado!
 -Se agregan los siguientes componentes - Categorias.js , HomeImg.js - 
 -Correccion de rutas
 
+---. Version 0.6 .---
+
+- Se agregan componentes
+- Se organizan mejor los archivos
+- Se obtiene filtro por categoria
+- Se agrega context
+
 Gracias! .-
 
 

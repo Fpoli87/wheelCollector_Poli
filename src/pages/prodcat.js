@@ -1,10 +1,10 @@
 import React from 'react';
-import HombreDetalle from '../components/hombre/HombreCat'
+import CategoriaDetalle from '../components/categorias/Categorias'
 
 const hombres = () => {
   return (
     <div>
-        <HombreDetalle />
+        <CategoriaDetalle />
     </div>
   )
 }

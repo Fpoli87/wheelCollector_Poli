@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Item = ({id, title, description, price, stock, pictureUrl}) => {
+const Item = ({id, title, description, price, stock, category, pictureUrl}) => {
   return (
     <div className='card m-3 border-primary'>
         <div className='row g-0'>
@@ -14,6 +14,8 @@ const Item = ({id, title, description, price, stock, pictureUrl}) => {
                     <p className='card-text fs-5'>{description}</p>
                     <p>${price}</p>
                     <p className='card-text fs-5'>Unidades Disponibles: {stock}</p>
+                    <p className='fs-4 d-inline'>Categoria:</p><Link className='card-text fs-5' to={"../categorias/" + category}>{category}</Link>
+                    <br />
                     <Link className='btn btn-primary' to={"./" + id}>Ver detalle</Link>
             </div>
             

@@ -1,11 +1,14 @@
 import React from 'react';
-import ItemListContainer from '../components/ItemListContainer';
+import ItemListContainer from '../components/ItemList/ItemListContainer';
+import Categorias from './categorias'
 
 const product = () => {
   return (
     <div>
+      <Categorias />
+
         
-        <ItemListContainer />
+      <ItemListContainer />
     </div>
   )
 }
