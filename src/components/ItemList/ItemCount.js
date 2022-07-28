@@ -1,7 +1,12 @@
-import {useState} from 'react'
+import {useState} from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";;
+
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial);
+
+    const navigate = useNavigate();
 
     const incrementar = () => {
         setCount(count + 1);
@@ -18,12 +23,16 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <button type="button" className="btn btn-primary m-1" disabled={count >= stock} onClick={incrementar}>+</button>
         <button type="button" className="btn btn-primary m-1" disabled={stock < 1} onClick={() => {
             if (count <= stock) {
-                onAdd( count);
+                onAdd(count);
             } else {
                 alert("No hay suficientes elementos");
             }
         }}>Agregar al Carrito</button>
+        <Link to={'/categorias'} onClick={() => navigate(-1)}>
+              <button type="button" className="btn btn-primary m-1">Volver atras</button>
+        </Link>
     </div>
+    
   );
 };
 

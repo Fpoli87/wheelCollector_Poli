@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import { cartContext } from '../../Context/CartContext';
+import { CartContext } from '../../Context/CartContext';
 import { useContext } from 'react';
 
 
@@ -10,8 +10,16 @@ const ItemDetail = ({item}) => {
 
   const {id, title, price, stock, description, pictureUrl, category} = item
   
+
+  const [irACarrito, setirACarrito] = useState(false)
+
   const navigate = useNavigate();
-  const {addProd} = useContext(cartContext)
+  const {addProd} = useContext(CartContext)
+
+  const agregar = (count) => {
+    setirACarrito(true)
+    addProd({...item}, count)
+  }
 
   
   return (
@@ -33,17 +41,21 @@ const ItemDetail = ({item}) => {
             </div>
             
         </div>
-        <ItemCount 
-            stock={stock} 
-            initial={1} 
-            onClick={(n) => alert(`Agregados ${n} productos!`)}
-            onAdd={addProd} 
-        />
-
-        <Link to={'/categorias'} onClick={() => navigate(-1)}>
+        {!irACarrito
+          ?       
+          <ItemCount 
+              stock={stock} 
+              initial={1} 
+              onClick={(n) => alert(`Agregados ${n} productos!`)}
+              onAdd={agregar} 
+          />
+            :
+          <><Link to={'/categorias'} onClick={() => navigate(-1)}>
           <button type="button" className="btn btn-primary m-1">Volver atras</button>
-        </Link>
-
+        </Link><Link to={'/carrito'}>
+            <button type="button" className="btn btn-primary m-1">Terminar mi compra</button>
+          </Link></>
+        }
         <br />
     </div>
   

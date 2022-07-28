@@ -66,6 +66,13 @@ Espero que sea de su agrado!
 - Correccion de render
 - Cambios en estilos de componentes
 
+---. Version 0.7 .---
+
+- Se optimiza las funciones del carrito de compra
+- Se añaden detalles de estilos
+- Se agrega componente CartCount.js
+- Se optimizan las funciones de Cart.js
+
 Gracias! .-
 
 
