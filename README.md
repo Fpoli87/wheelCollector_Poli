@@ -73,6 +73,11 @@ Espero que sea de su agrado!
 - Se agrega componente CartCount.js
 - Se optimizan las funciones de Cart.js
 
+---. Version 0.8 .---
+
+- Se eliminan los delays en cargar productos
+- Se introduce el acceso a firebase
+
 Gracias! .-
 
 

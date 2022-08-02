@@ -16,10 +16,8 @@ const Categorias = () => {
       const prodPorCat = () => {
 
         return new Promise((res) => {
-          setTimeout(() => {
-              res( products.filter(prod => prod.category === category)
-            )
-          }, 2000)
+          res( products.filter(prod => prod.category === category)
+            )   
         })
       
       }    

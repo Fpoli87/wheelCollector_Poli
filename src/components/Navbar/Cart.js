@@ -50,7 +50,10 @@ const Cart = () => {
                                     <div className="order_total_amount">${totales}</div>
                                 </div>
                         </div>
-                        <div className="cart_buttons"> <button type="button" className="button cart_button_clear">Continuar Comprando</button> <button type="button" className="button cart_button_checkout">Finalizar Orden</button> </div>
+                        <div className="cart_buttons"> 
+                            <Link to={'/productos'}><button type="button" className="button cart_button_clear">Continuar Comprando</button> </Link>
+                            <Link to={'/productos'}><button type="button" className="button cart_button_checkout">Finalizar Orden</button> </Link>
+                        </div>
                         <div className="text-xl font-bold" >Ingresa tus datos para continuar la compra:</div>
                         <form className="mt-5" style={{ display: "flex", alignItems: "center", flexDirection: "column"}}>
                             <div style={{ display: "flex", marginBottom: 8 , marginTop:8}}>

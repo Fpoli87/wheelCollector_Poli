@@ -32,8 +32,8 @@ const ItemDetail = ({item}) => {
             </div>
             
             <div className=' col-md-8 h-100 w-50'>
-                    <h2 className='card-title'>{title}</h2>
-                    <p className='card-text fs-3'>{description}</p>
+                    <h3 className='card-title'>{title}</h3>
+                    <p className='card-text fs-5'>{description}</p>
                     <p>${price}</p>
                     <p className='card-text fs-4'>Unidades Disponibles: {stock}</p>
                     <p className=' card-text fs-5'>Categoria:  {category}</p>

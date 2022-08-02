@@ -8,7 +8,8 @@ import Nosotros from './pages/nosotros';
 import Home from './pages/home';
 import Categorias from './pages/categorias';
 import ProdCat from './pages/prodcat';
-import Carrito from './pages/carrito'
+import Carrito from './pages/carrito';
+import './Firebase/firebase'
 
 import { 
   BrowserRouter, 
