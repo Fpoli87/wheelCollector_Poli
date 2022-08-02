@@ -8,13 +8,13 @@ const categorias = () => {
         CATEGORIAS
         <br />
         <br />
-                <Link to="/categorias/Hombres" className="nav-link d-inline fs-5 m-3" aria-current="page">Ropa de Hombre</Link>
+                <Link to="/categorias/Reliquias" className="nav-link d-inline fs-5 m-3" aria-current="page">Reliquias</Link>
                 {" | "}
-                <Link to="/categorias/Mujer" className="nav-link d-inline fs-5 m-3">Ropa de Mujer</Link>
+                <Link to="/categorias/Militaria" className="nav-link d-inline fs-5 m-3">Militaria</Link>
                 {" | "}
-                <Link to="/categorias/Electro" className="nav-link d-inline fs-5 m-3">Electronica</Link>
+                <Link to="/categorias/Cristaleria" className="nav-link d-inline fs-5 m-3">Cristaleria</Link>
                 {" | "}
-                <Link to="/categorias/Joyas" className="nav-link d-inline fs-5 m-3">Joyeria</Link>
+                <Link to="/categorias/Esculturas" className="nav-link d-inline fs-5 m-3">Esculturas</Link>
                 {" | "}
                 <Link to="/productos"   className="nav-link d-inline fs-5 m-3">Ver Todo</Link>
         <Outlet />

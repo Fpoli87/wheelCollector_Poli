@@ -78,6 +78,10 @@ Espero que sea de su agrado!
 - Se eliminan los delays en cargar productos
 - Se introduce el acceso a firebase
 
+---. Version 0.8.1 .---
+
+- Resolucion de errores para obtener datos de la base de datos
+
 Gracias! .-
 
 

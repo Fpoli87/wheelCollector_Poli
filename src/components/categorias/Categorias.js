@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {Outlet} from 'react-router-dom';
 import CategoriaDetalle from './CategoriasDetalle';
-import products from '../../products.json';
 import { useParams } from 'react-router-dom';
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
 
   
@@ -11,20 +11,34 @@ const Categorias = () => {
     const [item, setItems] = useState([]);
   const { category } = useParams()
   
-    useEffect(()=>{
+  useEffect(() => {
 
-      const prodPorCat = () => {
+    const getItems = async () => {
 
-        return new Promise((res) => {
-          res( products.filter(prod => prod.category === category)
-            )   
+      if (category !== undefined) {
+        const querydb = getFirestore();
+        const q = query(collection(querydb, 'products'), where('category', '==', category))
+        await getDocs(q).then((res) => {
+          const data = res.docs.map(prod => ({ id: prod.id, ...prod.data() }))
+
+          setItems(data)
         })
-      
-      }    
-      prodPorCat().then(res =>{
-            setItems(res)
-          })
-        }, [category] )
+      } else {
+
+        const db = getFirestore();
+        const q = (collection(db, 'products'))
+        await getDocs(q).then((res) => {
+          const data = res.docs.map(prod => ({ id: prod.id, ...prod.data() }))
+
+          setItems(data)
+        })
+      }
+    }
+
+
+    getItems();
+
+  }, [category])
       
           console.log(item)
 

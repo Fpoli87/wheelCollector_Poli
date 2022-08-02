@@ -28,11 +28,11 @@ const CartCard = ( {data} ) => {
                                             </div>
                                             <div className="cart_item_price cart_info_col">
                                                 <div className="cart_item_title">Price</div>
-                                                <div className="cart_item_text">${data.item.price}</div>
+                                                <div className="cart_item_text">u$s {data.item.price}</div>
                                             </div>
                                             <div className="cart_item_total cart_info_col">
                                                 <div className="cart_item_title">Total</div>
-                                                <div className="cart_item_text">${(data.item.price * data.count).toFixed(2)}</div>
+                                                <div className="cart_item_text">u$s {(data.item.price * data.count).toFixed(2)}</div>
                                             </div>
                                             <div className="cart_item_color cart_info_col">
                                                 <div className="cart_item_title">Remove</div>
