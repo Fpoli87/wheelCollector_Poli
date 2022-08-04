@@ -82,6 +82,11 @@ Espero que sea de su agrado!
 
 - Resolucion de errores para obtener datos de la base de datos
 
+---. Version 0.9 .---
+
+- Se realizan ajustes para la finalizacion de la compra
+- Se corrigen errores en el envio de informacion a firebase
+
 Gracias! .-
 
 

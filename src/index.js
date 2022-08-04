@@ -9,6 +9,7 @@ import Home from './pages/home';
 import Categorias from './pages/categorias';
 import ProdCat from './pages/prodcat';
 import Carrito from './pages/carrito';
+import Order from './components/Order/Order'
 import './Firebase/firebase'
 
 import { 
@@ -32,6 +33,7 @@ root.render(
             <Route path="productos/:id" element={<Prodetail />} />
             <Route path="nosotros" element={<Nosotros />}/>
             <Route path='carrito' element={<Carrito />}/>
+            <Route path='order' element={<Order/>}/>
             <Route path='*' element={<Home />}/>
             <Route index element={<Home />}/>
           </Route>

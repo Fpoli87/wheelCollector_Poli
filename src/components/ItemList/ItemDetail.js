@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { CartContext } from '../../Context/CartContext';
 import { useContext } from 'react';
+import {  toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetail = ({item}) => {
@@ -15,6 +17,7 @@ const ItemDetail = ({item}) => {
 
   const navigate = useNavigate();
   const {addProd} = useContext(CartContext)
+  const notify = () => toast("Wow so easy!");
 
   const agregar = (count) => {
     setirACarrito(true)
@@ -45,9 +48,10 @@ const ItemDetail = ({item}) => {
           <ItemCount 
               stock={stock} 
               initial={1} 
-              onClick={(n) => alert(`Agregados ${n} productos!`)}
+              onClick={notify}
               onAdd={agregar} 
           />
+          
             :
           <><Link to={'/categorias'} onClick={() => navigate(-1)}>
           <button type="button" className="btn btn-primary m-1">Volver atras</button>

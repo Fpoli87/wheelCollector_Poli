@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import {  ToastContainer } from 'react-toastify';
+
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";;
 
@@ -28,6 +30,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 alert("No hay suficientes elementos");
             }
         }}>Agregar al Carrito</button>
+        <ToastContainer />
         <Link to={'/categorias'} onClick={() => navigate(-1)}>
               <button type="button" className="btn btn-primary m-1">Volver atras</button>
         </Link>

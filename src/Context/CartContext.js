@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
 export const CartContext = createContext({
     cart: [],
@@ -40,6 +40,7 @@ const CartProvider = ({children}) => {
     const enCarrito = (id) => { 
         return cart.some( (i) => i.item.id === id)
     }
+    
 
     return (
         <CartContext.Provider value={{ cart,addProd,enCarrito,clearCarrito,removeProd }}>
@@ -48,3 +49,9 @@ const CartProvider = ({children}) => {
     )
 }
 export default CartProvider 
+
+
+
+export const SaveOrder = () => {
+    return useContext(CartContext)
+}
