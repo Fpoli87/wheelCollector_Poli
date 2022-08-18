@@ -5,8 +5,7 @@ const categorias = () => {
   return (
     <div className='d-inline'>
         <br />
-        CATEGORIAS
-        <br />
+        <Outlet />
         <br />
                 <Link to="/categorias/Reliquias" className="nav-link d-inline fs-5 m-3" aria-current="page">Reliquias</Link>
                 {" | "}
@@ -17,7 +16,7 @@ const categorias = () => {
                 <Link to="/categorias/Esculturas" className="nav-link d-inline fs-5 m-3">Esculturas</Link>
                 {" | "}
                 <Link to="/productos"   className="nav-link d-inline fs-5 m-3">Ver Todo</Link>
-        <Outlet />
+        
     </div>
   )
 }

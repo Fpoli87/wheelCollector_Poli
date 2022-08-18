@@ -1,9 +1,11 @@
 
-Bienvenidos al Repositorio
+Bienvenidos a mi Repositorio
 
 Este repositorio fue creado para subir el proyecto entregable del curso REACT de coderhouse!
 
 A continuacion se listan los detalles de cada commit agregado
+
+Espero que sea de su agrado! 
 
 Creacion REACT app
 
@@ -12,8 +14,6 @@ Creacion REACT app
 
 - Se agrega navbar de bootstrap 
 - Se hacen pequeños cambios de estilos
-
-Espero que sea de su agrado! 
 
 ---. Version 0.2 .---
 
@@ -86,6 +86,18 @@ Espero que sea de su agrado!
 
 - Se realizan ajustes para la finalizacion de la compra
 - Se corrigen errores en el envio de informacion a firebase
+
+---. Version 0.10 .---
+
+- Se realizan cambios de estilo en Navbar, Footer y componente Titulo.js
+- Se agrega pagina Contacto
+- Se agregan Productos Destacados en pagina Inicio
+- Se crea Hook para validacion de formulario
+- Se modifica el formulario de contacto 
+- Modificacion de estilos en carrito de compras
+- Cambios de estilo en Checkout
+- Validacion de formulario en Checkout
+
 
 Gracias! .-
 

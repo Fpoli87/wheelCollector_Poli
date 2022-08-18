@@ -8,4 +8,14 @@
 
 .cart-cart {
     position: relative;
+    border: none;
+
+}
+
+.cart-cart:active {
+    color: white!important;
+}
+
+.cart-cart:hover {
+    color: white!important;
 }

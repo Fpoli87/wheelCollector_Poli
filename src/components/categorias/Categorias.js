@@ -51,9 +51,11 @@ const Categorias = () => {
         
         <h2>Productos Disponibles en Seccion {category}</h2>
 
-        {item.map(items =>
-          <CategoriaDetalle items={ items } />
-        )}
+        <div className='row row-cols-1 row-cols-md-2 g-4 items'>
+          {item.map(items =>
+            <CategoriaDetalle items={ items } />
+          )}
+        </div>
     </div>
   )
 }

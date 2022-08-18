@@ -21,9 +21,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
     <div >
         <br />
         <h3 className="fst-italic">{count}</h3>
-        <button type="button" className="btn btn-primary m-1" disabled={count == 1} onClick={decrementar}>-</button>
-        <button type="button" className="btn btn-primary m-1" disabled={count >= stock} onClick={incrementar}>+</button>
-        <button type="button" className="btn btn-primary m-1" disabled={stock < 1} onClick={() => {
+        <button type="button" className="btn btn-dark m-1" disabled={count == 1} onClick={decrementar}>-</button>
+        <button type="button" className="btn btn-dark m-1" disabled={count >= stock} onClick={incrementar}>+</button>
+        <button type="button" className="btn btn-dark m-1" disabled={stock < 1} onClick={() => {
             if (count <= stock) {
                 onAdd(count);
             } else {
@@ -32,7 +32,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }}>Agregar al Carrito</button>
         <ToastContainer />
         <Link to={'/categorias'} onClick={() => navigate(-1)}>
-              <button type="button" className="btn btn-primary m-1">Volver atras</button>
+              <button type="button" className="btn btn-dark m-1">Volver atras</button>
         </Link>
     </div>
     

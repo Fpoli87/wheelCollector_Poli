@@ -1,10 +1,13 @@
 import React from 'react'
-import Categorias from '../components/Categorias.js'
+import CategoriasImg from '../components/categorias/CategoriasImg.js'
 
 const categorias = () => {
   return (
     <div>
-        <Categorias />
+        <br />
+        CATEGORIAS
+        <br />
+        <CategoriasImg />
     </div>
   )
 }

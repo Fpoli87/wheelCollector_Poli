@@ -1,0 +1,15 @@
+.contacto_min {
+    margin: 0;
+    margin-top: 80px;
+    width: 100vw;
+    height: 350px;
+    color: white;
+    background-image: url('../../../Img/img/contacto1.jpg');
+    background-repeat: center!important;
+    background-position: center!important;
+    background-size: cover!important;
+}
+
+.contacto_mini {
+    padding-top: 50px;
+}

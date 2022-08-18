@@ -1,3 +1,85 @@
 footer {
-    background-color: rgb(216, 62, 180);
-}
+    background-image: url('../../Img/img/fondo1.jpg');
+    background-repeat: center!important;
+    background-position: center!important;
+    background-size: cover!important;
+    margin-top: 30px;
+    clear: both;
+    width: 100%;
+    grid-row-start: 5;
+    grid-row-end: 6; }
+    footer section {
+      margin-bottom: 10px; }
+  
+  .footer__contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0px; }
+  
+  .footer__columna1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    font-size: 1.2rem; }
+  
+  .footer__columna2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  
+  .subgrid__derechos {
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem; }
+  
+  .footer__columna3 {
+    margin-top: 0px;
+    margin-right: 0;
+    text-align: justify;
+    font-size: 1.2rem; }
+  
+  .columna3__contacto__whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  
+  .columna3__contacto__telefono {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  
+  .columna3__contacto__mail {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  
+  /*  FOOTER MOBILE */
+  @media screen and (max-width: 724px) {
+    .subgrid__politicas {
+      grid-area: politicas;
+      text-align: center; }
+    .subgrid__redes {
+      grid-area: redes;
+      align-content: space-between;
+      align-items: center; }
+    .subgrid__derechos {
+      grid-area: derechos;
+      font-size: 1.3rem; }
+    .subgrid__contactos {
+      grid-area: contactos; }
+    .footer__contenedor {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(4, auto);
+      gap: 0.5rem;
+      grid-template-areas: "redes"
+   "contactos"
+   "politicas"
+   "derechos";
+      justify-content: center; } }
+

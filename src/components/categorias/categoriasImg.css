@@ -1,0 +1,34 @@
+.categorias {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 120px;
+    padding-bottom: 200px;
+    width: 100%;
+    height: 50px;
+    font-size: 6rem;
+    color: white;
+    background-repeat: center!important;
+    background-position: center!important;
+    background-size: cover!important;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: white;
+}
+
+.categoria-img-esc {
+    background-image: url('../../Img/img/esculturasCat.jpg');
+}
+
+.categoria-img-mil {
+    background-image: url('../../Img/img/milCat.png');
+}
+
+.categoria-img-rel {
+    background-image: url('../../Img/img/relCat.jpg');
+}
+
+.categoria-img-cris {
+    background-image: url('../../Img/img/crisCat.jpg');
+}

@@ -26,13 +26,13 @@ const Cart = () => {
                 <div className="w-auto">
                     { cart.length ?
                     <div>
-                        <div className="cart_title"><small> {cart.reduce((acumulador, actual) => acumulador + actual.count, 0)} item in your cart </small></div>
+                        <div className="cart_title"><small>Tus elementos en Carrito de compras ---&gt; {cart.reduce((acumulador, actual) => acumulador + actual.count, 0)}</small></div>
                         <div className="flex w-auto h-auto flex-wrap mt-10 justify-center border-2 border-neutral-content p-20">
                             {cart.map( i => <CartCard key={i.item.id} data={i}/>)}
                         </div> 
-                        <div className="order_total border-primary">
+                        <div className="order_total border-dark">
                                 <div className="order_total_content text-md-right">
-                                    <div className="order_total_title">Order Total:</div>
+                                    <div className="order_total_title">Total Orden:</div>
                                     <div className="order_total_amount">u$s {totales}</div>
                                 </div>
                         </div>
@@ -46,7 +46,7 @@ const Cart = () => {
                     :
                     <div className="flex flex-col mt-10 mb-10 border-2 border-neutral-content p-20">
                         <h1 className="font-bold text-4xl mt-10 mb-10">No hay productos en el carrito</h1>
-                        <button className="btn btn-outline-primary btn-lg"><Link to={'/productos'}>Revisar más articulos</Link></button>
+                        <button className="btn btn-outline-dark btn-lg"><Link to={'/productos'}>Revisar más articulos</Link></button>
                     </div>
                     }  
 

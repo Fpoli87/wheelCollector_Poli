@@ -7,7 +7,7 @@ import Titulo from './components/Titulo'
 
 function App() {
   return (
-  <div className="App d-flex flex-column vh-100">
+  <div className="App d-flex flex-column vh-100 m-0 vw-100">
         
     <Navbar />
     <Titulo greeting={"El rincon del coleccionista"} />

@@ -1,8 +1,10 @@
 import React from 'react'
+import './titulo.css'
 
 const Saludo = ({ greeting }) => {
   return (
-    <div className='fs-1 mt-3 fst-italic'>
+    <div className=' mt-3 titulo '>
+      
         {greeting}
     </div>
   )
