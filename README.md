@@ -98,6 +98,10 @@ Creacion REACT app
 - Cambios de estilo en Checkout
 - Validacion de formulario en Checkout
 
+---. Version 1.0 .---
+
+- Se limpia todo codigo inutilizado
+
 
 Gracias! .-
 

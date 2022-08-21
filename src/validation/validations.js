@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const validationsForm = (form) => {
     let errors = {};
     let validName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;

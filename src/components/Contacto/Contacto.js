@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import ContForm from '../Form/ContForm'
-import LoadingGlobe from '../../Img/img/loading1.gif'
 
 
 const Contacto = () => {
