@@ -1,5 +1,5 @@
 import React from 'react'
-import CategoriasImg from '../components/categorias/CategoriasImg.js'
+import CategoriasImg from '../components/Categorias/CategoriasImg.js'
 
 const categorias = () => {
   return (

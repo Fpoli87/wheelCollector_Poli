@@ -1,6 +1,6 @@
 import React from "react";
-import CartCount from "./CartCount";
-import './cart.css'
+import CartCount from "../CartCount/CartCount";
+import '../Cart/cart.css'
 
 const CartWidget = () => {
     return (

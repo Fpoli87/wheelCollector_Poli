@@ -3,20 +3,13 @@ import { CartContext } from "../../Context/CartContext";
 
 
 export default function CartCount (){
-  const { cart } = useContext(CartContext);
+  const { cart, contarCarrito } = useContext(CartContext);
 
   const [totalProductos, contarProductos] = useState(0);
+  
 
 useEffect(() => {
-  const contarQuantity = ()=>{
-    let totalProductos = 0;
-    for (let i = 0; i < cart.length; i++) {
-      totalProductos += cart[i].count;
-  }
-  return contarProductos(totalProductos)
-  
-  }
-  contarQuantity();
+  contarProductos(contarCarrito(contarProductos));
   }, [cart]);
 
   return(

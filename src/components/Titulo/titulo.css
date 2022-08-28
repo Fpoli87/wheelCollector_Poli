@@ -6,7 +6,7 @@
     height: 200px;
     font-size: 4.5rem;
     color: white;
-    background-image: url('../Img/img/inicioBanner.png');
+    background-image: url('../../Img/img/inicioBanner.png');
     background-repeat: center!important;
     background-position: center!important;
     background-size: cover!important;

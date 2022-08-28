@@ -5,7 +5,8 @@ export const CartContext = createContext({
     addProd: () => {},
     removeProd: () => {},
     clearCarrito: () => {},
-    enCarrito: () => {}
+    enCarrito: () => {},
+    contarCarrito: () =>{}
 })
 
 const CartProvider = ({children}) => {
@@ -26,8 +27,6 @@ const CartProvider = ({children}) => {
             setCart([...cart, itemCart])
             } 
     }
-    console.log(cart)
-
     const removeProd =  (item) => { 
         const newCart = cart.filter(i => i.item.id !== item.id);
         setCart([ ...newCart ]);  
@@ -40,16 +39,22 @@ const CartProvider = ({children}) => {
     const enCarrito = (id) => { 
         return cart.some( (i) => i.item.id === id)
     }
-    
+
+    const contarCarrito = () => {
+        let totalProductos = 0;
+        for (let i = 0; i < cart.length; i++) {
+        totalProductos += cart[i].count;
+        }
+        return totalProductos
+    }    
 
     return (
-        <CartContext.Provider value={{ cart,addProd,enCarrito,clearCarrito,removeProd }}>
+        <CartContext.Provider value={{ cart,addProd,enCarrito,clearCarrito,removeProd,contarCarrito }}>
             {children}
         </CartContext.Provider>
     )
 }
 export default CartProvider 
-
 
 
 export const SaveOrder = () => {

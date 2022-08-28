@@ -1,7 +1,7 @@
 import React from 'react'
-import ItemMinContainer from './Mini/Prod/ProdMinContainer'
-import ContactoMin from './Mini/Contacto/ContactoMin'
-import HistoriaMin from './Mini/Historia/HistoriaMin'
+import ItemMinContainer from '../Mini/Prod/ProdMinContainer'
+import ContactoMin from '../Mini/Contacto/ContactoMin'
+import HistoriaMin from '../Mini/Historia/HistoriaMin'
 
 const Homeimg = () => {
   return (

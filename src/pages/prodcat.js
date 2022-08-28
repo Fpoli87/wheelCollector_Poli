@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoriaDetalle from '../components/categorias/Categorias'
+import CategoriaDetalle from '../components/Categorias/Categorias'
 
 const hombres = () => {
   return (

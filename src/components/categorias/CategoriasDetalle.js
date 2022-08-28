@@ -8,7 +8,6 @@ const CategoriaDetalle = ({items}) => {
   const {id, title, price, stock, description, pictureUrl, category} = items
 
 
-  console.log(items)
   return (
     <div className='col'>
       <div className='card m-2 border-dark h-100'> 

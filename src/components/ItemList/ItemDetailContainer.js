@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
         .then(snp => setItem({id: snp.id, ...snp.data()})) 
         }, [id] )
       
-          console.log(id)
     return (
     <div className='fs-1 mt-3 fst-italic'>
         {<ItemDetail item={ item } />}

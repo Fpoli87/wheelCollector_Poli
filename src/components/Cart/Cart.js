@@ -12,10 +12,7 @@ const Cart = () => {
     
 
     const totales = cart.reduce((acumulador, actual) => acumulador + (actual.count * actual.item.price), 0)
-
     
-    
-    console.log(cart)
     return (
         <div className="text-center w-auto bg-base-100 shadow-xl m-10 border-4 border-neutral-content p-5 ">
                 <div className="flex w-auto">

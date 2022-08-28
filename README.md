@@ -102,6 +102,13 @@ Creacion REACT app
 
 - Se limpia todo codigo inutilizado
 
+---. Version 1.1 .---
+
+- Se incorpora contador del CartWidget al CartContext
+- Optimizacion en la organizacion de las carpetas 
+- Se agregan metodos en firebase.js
+- Eliminacion de consultas console.log
+
 
 Gracias! .-
 

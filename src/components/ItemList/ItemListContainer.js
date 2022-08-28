@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import {Outlet} from 'react-router-dom';
 import ItemList from './ItemList';
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getDocs } from "firebase/firestore";
+import { queryCollection } from '../../Firebase/firebase';
 
 function ItemListContainer() {
 
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-      const db = getFirestore();
-     
-          const queryCollection = collection(db, 'products')
-          getDocs(queryCollection)
+      getDocs(queryCollection)
           .then(resp => setProducts( resp.docs.map(prod => ({ id: prod.id, ...prod.data()}))))
       
   }, [])
