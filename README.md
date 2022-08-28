@@ -109,6 +109,10 @@ Creacion REACT app
 - Se agregan metodos en firebase.js
 - Eliminacion de consultas console.log
 
+---. Version 1.2 .---
+
+-Resuelto problema context en CartCount
+
 
 Gracias! .-
 

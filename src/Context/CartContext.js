@@ -41,11 +41,8 @@ const CartProvider = ({children}) => {
     }
 
     const contarCarrito = () => {
-        let totalProductos = 0;
-        for (let i = 0; i < cart.length; i++) {
-        totalProductos += cart[i].count;
-        }
-        return totalProductos
+        return cart.reduce((acc, prod) => acc + prod.count, 0)
+      
     }    
 
     return (
