@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
-import categorias from "../../pages/categorias";
 
 
 export default function CartCount (){

@@ -111,8 +111,11 @@ Creacion REACT app
 
 ---. Version 1.2 .---
 
--Resuelto problema context en CartCount
+- Resuelto problema context en CartCount
 
+---. Version 1.3 .---
+
+- Limpieza de codigo inutilizado
 
 Gracias! .-
 
